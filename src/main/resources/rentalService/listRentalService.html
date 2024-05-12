@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Rental Services - Furama</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>List Rental Services</h1>
+    <!-- Table for listing rental services goes here -->
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Area (m<sup>2</sup>)</th>
+            <th>Rental Cost</th>
+            <th>Max Guests</th>
+            <th>Standard</th>
+            <th>Description</th>
+            <th>Pool Area (m<sup>2</sup>)</th>
+            <th>Floors</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody id="rentalServiceTableBody">
+        <!-- Rental service data rows will be inserted here -->
+        </tbody>
+    </table>
+</div>
+<!-- Link Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    // Sample data for rental services
+    const rentalServices = [
+        { id: 1, name: "House A", area: 200, rentalCost: 3000000, maxGuests: 8, standard: "3 stars", description: "Comfortable house", floors: 3 },
+        { id: 2, name: "Room B", area: 30, rentalCost: 500000, maxGuests: 2, standard: "Basic", description: "Cozy room", freeServices: "Breakfast, WiFi" },
+        { id: 3, name: "Villa C", area: 300, rentalCost: 5000000, maxGuests: 10, standard: "5 stars", description: "Luxurious villa", poolArea: 100, floors: 2 }
+    ];
+
+    // Function to render rental service data
+    function renderRentalServices() {
+        const tableBody = document.getElementById("rentalServiceTableBody");
+        tableBody.innerHTML = "";
+
+        rentalServices.forEach(service => {
+            const row = `
+                    <tr>
+                        <td>${service.id}</td>
+                        <td>${service.name}</td>
+                        <td>${service.area}</td>
+                        <td>${service.rentalCost}</td>
+                        <td>${service.maxGuests}</td>
+                        <td>${service.standard}</td>
+                        <td>${service.description}</td>
+                        <td>${service.poolArea ? service.poolArea : '-'}</td>
+                        <td>${service.floors}</td>
+                        <td>
+                            <button class="btn btn-primary" onclick="editRentalService(${service.id})">Edit</button>
+                            <button class="btn btn-danger" onclick="deleteRentalService(${service.id})">Delete</button>
+                        </td>
+                    </tr>
+                `;
+            tableBody.innerHTML += row;
+        });
+    }
+
+    // Function to handle editing a rental service
+    function editRentalService(id) {
+        // Redirect to edit page for the specified rental service ID
+        // Example: window.location.href = `editRentalService.html?id=${id}`;
+        console.log(`Edit rental service with ID: ${id}`);
+    }
+
+    // Function to handle deleting a rental service
+    function deleteRentalService(id) {
+        // Display confirmation modal for deleting the rental service
+        // Example: $('#deleteRentalServiceModal').modal('show');
+        console.log(`Delete rental service with ID: ${id}`);
+    }
+
+    // Call the function to render rental service data
+    renderRentalServices();
+</script>
+</body>
+</html>

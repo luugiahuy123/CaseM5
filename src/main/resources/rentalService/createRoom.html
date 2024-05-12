@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Room - Furama</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Create New Room</h1>
+    <!-- Form for creating a new room goes here -->
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="area">Area:</label>
+            <input type="text" class="form-control" id="area" name="area">
+        </div>
+        <div class="form-group">
+            <label for="rentalCost">Rental Cost:</label>
+            <input type="text" class="form-control" id="rentalCost" name="rentalCost">
+        </div>
+        <div class="form-group">
+            <label for="maxGuests">Max Guests:</label>
+            <input type="text" class="form-control" id="maxGuests" name="maxGuests">
+        </div>
+        <div class="form-group">
+            <label for="rentType">Rent Type:</label>
+            <select class="form-control" id="rentType" name="rentType">
+                <option value="year">Year</option>
+                <option value="month">Month</option>
+                <option value="day">Day</option>
+                <option value="hour">Hour</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="freeServices">Free Services:</label>
+            <input type="text" class="form-control" id="freeServices" name="freeServices">
+        </div>
+        <!-- Add more input fields as needed -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<!-- Link Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

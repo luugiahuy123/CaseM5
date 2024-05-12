@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit House - Furama</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Edit House Information</h1>
+    <!-- Form for editing house information goes here -->
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="form-group">
+            <label for="area">Area:</label>
+            <input type="text" class="form-control" id="area" name="area">
+        </div>
+        <div class="form-group">
+            <label for="rentalCost">Rental Cost:</label>
+            <input type="text" class="form-control" id="rentalCost" name="rentalCost">
+        </div>
+        <div class="form-group">
+            <label for="maxGuests">Max Guests:</label>
+            <input type="text" class="form-control" id="maxGuests" name="maxGuests">
+        </div>
+        <div class="form-group">
+            <label for="rentType">Rent Type:</label>
+            <select class="form-control" id="rentType" name="rentType">
+                <option value="year">Year</option>
+                <option value="month">Month</option>
+                <option value="day">Day</option>
+                <option value="hour">Hour</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="standard">Standard:</label>
+            <input type="text" class="form-control" id="standard" name="standard">
+        </div>
+        <div class="form-group">
+            <label for="description">Description:</label>
+            <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="floors">Floors:</label>
+            <input type="text" class="form-control" id="floors" name="floors">
+        </div>
+        <!-- Add more input fields as needed -->
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<!-- Link Bootstrap JS -->
+<script src="https://code.jquery.com/jquery

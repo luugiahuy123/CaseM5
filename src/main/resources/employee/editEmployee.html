@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Employee - Furama</title>
+    <!-- Link Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <h1>Edit Employee</h1>
+    <!-- Form for editing employee goes here -->
+    <form>
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+            <label for="dob">Date of Birth</label>
+            <input type="date" class="form-control" id="dob">
+        </div>
+        <div class="form-group">
+            <label for="idNumber">ID Number</label>
+            <input type="text" class="form-control" id="idNumber" placeholder="Enter ID number">
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="text" class="form-control" id="phoneNumber" placeholder="Enter phone number">
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="education">Education</label>
+            <select class="form-control" id="education">
+                <option value="highSchool">High School</option>
+                <option value="college">College</option>
+                <option value="university">University</option>
+                <option value="postGraduate">Post Graduate</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="position">Position</label>
+            <select class="form-control" id="position">
+                <option value="receptionist">Receptionist</option>
+                <option value="waiter">Waiter</option>
+                <option value="specialist">Specialist</option>
+                <option value="supervisor">Supervisor</option>
+                <option value="manager">Manager</option>
+                <option value="director">Director</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+<!-- Link Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

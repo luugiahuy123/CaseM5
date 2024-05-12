@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>List Additional Services - Furama</title>
+  <!-- Link Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+  <h1>List Additional Services</h1>
+  <!-- Table for listing additional services goes here -->
+  <table class="table">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Unit</th>
+      <th>Price</th>
+    </tr>
+    </thead>
+    <tbody id="additionalServiceTableBody">
+    <!-- Additional service data rows will be inserted here -->
+    </tbody>
+  </table>
+</div>
+<!-- Link Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+  // Sample data for additional services
+  const additionalServices = [
+    { id: 1, name: "Massage", unit: "session", price: 500000 },
+    { id: 2, name: "Karaoke", unit: "hour", price: 200000 },
+    { id: 3, name: "Food", unit: "dish", price: 150000 },
+    { id: 4, name: "Drinks", unit: "glass", price: 50000 },
+    { id: 5, name: "Rental Car", unit: "day", price: 1000000 }
+  ];
+
+  // Function to render additional service data
+  function renderAdditionalServices() {
+    const tableBody = document.getElementById("additionalServiceTableBody");
+    tableBody.innerHTML = "";
+
+    additionalServices.forEach(service => {
+      const row = `
+                    <tr>
+                        <td>${service.id}</td>
+                        <td>${service.name}</td>
+                        <td>${service.unit}</td>
+                        <td>${service.price}</td>
+                    </tr>
+                `;
+      tableBody.innerHTML += row;
+    });
+  }
+
+  // Call the function to render additional service data
+  renderAdditionalServices();
+</script>
+</body>
+</html>
